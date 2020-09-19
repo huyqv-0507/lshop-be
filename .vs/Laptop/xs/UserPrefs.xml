@@ -1,0 +1,81 @@
+﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
+  <MonoDevelop.Ide.ItemProperties.Data FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Services/OrderService.cs">
+    <Files>
+      <File FileName="Data/Models/Discount.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Data/LaptopDbContext.cs" />
+      <File FileName="Data/Models/Role.cs" />
+      <File FileName="Data/Models/User.cs" />
+      <File FileName="Data/Models/Brand.cs" />
+      <File FileName="Data/Models/Order.cs" />
+      <File FileName="Data/Models/OrderDetail.cs" />
+      <File FileName="Data/Models/Laptop.cs" />
+      <File FileName="Data/Models/Picture.cs" />
+      <File FileName="Data/Infrastructures/IDbFactory.cs" />
+      <File FileName="Data/Infrastructures/Disposable.cs" />
+      <File FileName="Data/Infrastructures/IRepositoryBase.cs" />
+      <File FileName="Data/Infrastructures/IUnitOfWork.cs" />
+      <File FileName="Data/Infrastructures/RepositoryBase.cs" Line="65" Column="31" />
+      <File FileName="Data/Infrastructures/Repositories/BrandRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/DiscountRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/LaptopRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/OrderRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/OrderDetailRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/PictureRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/RoleRepository.cs" />
+      <File FileName="Data/Infrastructures/Repositories/UserRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IBrandRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IDiscountRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/ILaptopRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IOrderDetailRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IOrderRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IPictureRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IRoleRepository.cs" />
+      <File FileName="Data/Infrastructures/IRepositories/IUserRepository.cs" />
+      <File FileName="LaptopBE/Properties/launchSettings.json" />
+      <File FileName="LaptopBE/Startup.cs" />
+      <File FileName="LaptopBE/Configs/DIConfig.cs" Line="22" Column="68" />
+      <File FileName="Services/IServices/IUserService.cs" Line="12" Column="36" />
+      <File FileName="Services/Services/UserService.cs" Line="52" Column="10" />
+      <File FileName="Services/ConvertionModels/RegisterModel.cs" Line="10" Column="42" />
+      <File FileName="LaptopBE/Controllers/UsersController.cs" Line="51" Column="18" />
+      <File FileName="LaptopBE/Controllers/HomeController.cs" Line="27" Column="10" />
+      <File FileName="Services/IServices/ILaptopService.cs" Line="12" Column="43" />
+      <File FileName="Services/Services/LaptopService.cs" Line="18" Column="54" />
+      <File FileName="LaptopBE/Controllers/CartsController.cs" Line="1" Column="1" />
+      <File FileName="Services/IServices/IOrderService.cs" Line="11" Column="21" />
+      <File FileName="Services/Services/OrderService.cs" Line="4" Column="46" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Laptop" expanded="True">
+            <Node name="Data" expanded="True">
+              <Node name="Infrastructures" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+            <Node name="LaptopBE" expanded="True">
+              <Node name="Configs" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="Services" expanded="True">
+              <Node name="ConvertionModels" expanded="True" />
+              <Node name="IServices" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="OrderService.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Services FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.LaptopBE FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

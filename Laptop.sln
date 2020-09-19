@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaptopBE", "LaptopBE\LaptopBE.csproj", "{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{7571CC20-AEC9-41FD-B682-0C888C9CF340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{BC17F40F-E080-4FB7-92C3-130CF8733BD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7571CC20-AEC9-41FD-B682-0C888C9CF340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7571CC20-AEC9-41FD-B682-0C888C9CF340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7571CC20-AEC9-41FD-B682-0C888C9CF340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7571CC20-AEC9-41FD-B682-0C888C9CF340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC17F40F-E080-4FB7-92C3-130CF8733BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC17F40F-E080-4FB7-92C3-130CF8733BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC17F40F-E080-4FB7-92C3-130CF8733BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC17F40F-E080-4FB7-92C3-130CF8733BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
