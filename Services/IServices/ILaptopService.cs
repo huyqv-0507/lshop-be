@@ -9,7 +9,8 @@ namespace Services.IServices
     {
         IEnumerable<Laptop> GetLaptops();
         IEnumerable<Laptop> GetLaptopsPaging(int page, int pageSize);
-        IEnumerable<Laptop> GetManyLaptops(string txtSearch);
+        IEnumerable<Laptop> SearchLaptops(string txtSearch);
+
         void Save();
     }
 }

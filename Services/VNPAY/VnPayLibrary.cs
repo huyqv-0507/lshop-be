@@ -4,7 +4,6 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
-using Microsoft.AspNetCore.Http;
 
 namespace onlinestore.Vnpay
 {
@@ -158,11 +157,11 @@ namespace onlinestore.Vnpay
         public static string GetIpAddress()
         {
             string ipAddress;
-            ipAddress = "http://127.0.0.1:55257/";
+            ipAddress = "http://127.0.0.1:52943/";
 
             return ipAddress;
         }
-       
+
     }
 
     public class VnPayCompare : IComparer<string>

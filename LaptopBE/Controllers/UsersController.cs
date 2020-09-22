@@ -20,7 +20,7 @@ namespace LaptopBE.Controllers
             this.userService = userService;
         }
         //POST api/v1/users/login
-        [HttpPost("login")]
+        [HttpPost("signin")]
         public IActionResult Login(string userName, string password)
         {
             bool result = userService.Login(userName, password);
@@ -28,7 +28,7 @@ namespace LaptopBE.Controllers
             return Ok();
         }
         //POST api/v1/users/register
-        [HttpPost("register")]
+        [HttpPost("signup")]
         public IActionResult Register(RegisterModel registerModel)
         {
             userService.Register(registerModel);

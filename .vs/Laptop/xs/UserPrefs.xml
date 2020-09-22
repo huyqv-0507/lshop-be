@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
-  <MonoDevelop.Ide.ItemProperties.Data FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Services/OrderService.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Data/Models/Discount.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Data/Models/Discount.cs" Line="4" Column="19" IsPinned="True" />
       <File FileName="Data/LaptopDbContext.cs" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
@@ -15,7 +14,7 @@
       <File FileName="Data/Infrastructures/Disposable.cs" />
       <File FileName="Data/Infrastructures/IRepositoryBase.cs" />
       <File FileName="Data/Infrastructures/IUnitOfWork.cs" />
-      <File FileName="Data/Infrastructures/RepositoryBase.cs" Line="65" Column="31" />
+      <File FileName="Data/Infrastructures/RepositoryBase.cs" />
       <File FileName="Data/Infrastructures/Repositories/BrandRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/DiscountRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/LaptopRepository.cs" />
@@ -34,44 +33,42 @@
       <File FileName="Data/Infrastructures/IRepositories/IUserRepository.cs" />
       <File FileName="LaptopBE/Properties/launchSettings.json" />
       <File FileName="LaptopBE/Startup.cs" />
-      <File FileName="LaptopBE/Configs/DIConfig.cs" Line="22" Column="68" />
-      <File FileName="Services/IServices/IUserService.cs" Line="12" Column="36" />
-      <File FileName="Services/Services/UserService.cs" Line="52" Column="10" />
-      <File FileName="Services/ConvertionModels/RegisterModel.cs" Line="10" Column="42" />
-      <File FileName="LaptopBE/Controllers/UsersController.cs" Line="51" Column="18" />
-      <File FileName="LaptopBE/Controllers/HomeController.cs" Line="27" Column="10" />
-      <File FileName="Services/IServices/ILaptopService.cs" Line="12" Column="43" />
-      <File FileName="Services/Services/LaptopService.cs" Line="18" Column="54" />
-      <File FileName="LaptopBE/Controllers/CartsController.cs" Line="1" Column="1" />
-      <File FileName="Services/IServices/IOrderService.cs" Line="11" Column="21" />
-      <File FileName="Services/Services/OrderService.cs" Line="4" Column="46" />
+      <File FileName="LaptopBE/Configs/DIConfig.cs" />
+      <File FileName="Services/IServices/IUserService.cs" />
+      <File FileName="Services/Services/UserService.cs" />
+      <File FileName="Services/ConvertionModels/RegisterModel.cs" />
+      <File FileName="LaptopBE/Controllers/UsersController.cs" />
+      <File FileName="Services/IServices/ILaptopService.cs" />
+      <File FileName="Services/Services/LaptopService.cs" />
+      <File FileName="Services/IServices/IOrderService.cs" />
+      <File FileName="Services/Services/OrderService.cs" />
+      <File FileName="Services/VNPAY/VnPayLibrary.cs" />
+      <File FileName="LaptopBE/Controllers/LaptopsController.cs" />
+      <File FileName="Services/IServices/IOrderDetailService.cs" />
+      <File FileName="Services/Services/OrderDetailService.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Laptop" expanded="True">
             <Node name="Data" expanded="True">
-              <Node name="Infrastructures" expanded="True" />
-              <Node name="Models" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Discount.cs" selected="True" />
+              </Node>
             </Node>
             <Node name="LaptopBE" expanded="True">
-              <Node name="Configs" expanded="True" />
               <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="Services" expanded="True">
-              <Node name="ConvertionModels" expanded="True" />
               <Node name="IServices" expanded="True" />
-              <Node name="Services" expanded="True">
-                <Node name="OrderService.cs" selected="True" />
-              </Node>
+              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Services FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.LaptopBE FirstBuild="True" PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.LaptopBE PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

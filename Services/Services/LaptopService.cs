@@ -18,7 +18,7 @@ namespace Services.Services
             this.laptopRepository = laptopRepository;
         }
 
-        public IEnumerable<Laptop> GetManyLaptops(string txtSearch)
+        public IEnumerable<Laptop> SearchLaptops(string txtSearch)
         {
             var laptops = laptopRepository.GetMany(laps => laps.LaptopName.Contains(txtSearch) || laps.Brand.BrandName.Contains(txtSearch));
             return laptops;
@@ -38,5 +38,7 @@ namespace Services.Services
         {
             unitOfWork.Commit();
         }
+
+
     }
 }
