@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaptopBE/Configs/DIConfig.cs">
     <Files>
-      <File FileName="Data/Models/Discount.cs" Line="4" Column="19" IsPinned="True" />
-      <File FileName="Data/LaptopDbContext.cs" />
+      <File FileName="Data/Models/Discount.cs" Line="15" Column="2" IsPinned="True" />
+      <File FileName="Data/LaptopDbContext.cs" Line="74" Column="53" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
       <File FileName="Data/Models/Brand.cs" />
       <File FileName="Data/Models/Order.cs" />
       <File FileName="Data/Models/OrderDetail.cs" />
-      <File FileName="Data/Models/Laptop.cs" />
-      <File FileName="Data/Models/Picture.cs" />
+      <File FileName="Data/Models/Laptop.cs" Line="19" Column="24" />
       <File FileName="Data/Infrastructures/IDbFactory.cs" />
       <File FileName="Data/Infrastructures/Disposable.cs" />
       <File FileName="Data/Infrastructures/IRepositoryBase.cs" />
@@ -20,7 +19,6 @@
       <File FileName="Data/Infrastructures/Repositories/LaptopRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/OrderRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/OrderDetailRepository.cs" />
-      <File FileName="Data/Infrastructures/Repositories/PictureRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/RoleRepository.cs" />
       <File FileName="Data/Infrastructures/Repositories/UserRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IBrandRepository.cs" />
@@ -28,12 +26,11 @@
       <File FileName="Data/Infrastructures/IRepositories/ILaptopRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IOrderDetailRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IOrderRepository.cs" />
-      <File FileName="Data/Infrastructures/IRepositories/IPictureRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IRoleRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IUserRepository.cs" />
       <File FileName="LaptopBE/Properties/launchSettings.json" />
       <File FileName="LaptopBE/Startup.cs" />
-      <File FileName="LaptopBE/Configs/DIConfig.cs" />
+      <File FileName="LaptopBE/Configs/DIConfig.cs" Line="23" Column="70" />
       <File FileName="Services/IServices/IUserService.cs" />
       <File FileName="Services/Services/UserService.cs" />
       <File FileName="Services/ConvertionModels/RegisterModel.cs" />
@@ -43,25 +40,38 @@
       <File FileName="Services/IServices/IOrderService.cs" />
       <File FileName="Services/Services/OrderService.cs" />
       <File FileName="Services/VNPAY/VnPayLibrary.cs" />
-      <File FileName="LaptopBE/Controllers/LaptopsController.cs" />
+      <File FileName="LaptopBE/Controllers/LaptopsController.cs" Line="32" Column="42" />
       <File FileName="Services/IServices/IOrderDetailService.cs" />
       <File FileName="Services/Services/OrderDetailService.cs" />
+      <File FileName="LaptopBE/Controllers/OrdersController.cs" />
+      <File FileName="Services/ConvertionModels/LaptopModel.cs" />
+      <File FileName="Services/Services/PaymentService.cs" />
+      <File FileName="Services/VNPAY/OrderInfor.cs" />
+      <File FileName="LaptopBE/Controllers/PaymentController.cs" />
+      <File FileName="Services/IServices/IPaymentService.cs" />
+      <File FileName="LaptopBE/UiModels/LaptopUiModel.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Laptop" expanded="True">
             <Node name="Data" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="Discount.cs" selected="True" />
+              <Node name="Infrastructures" expanded="True">
+                <Node name="IRepositories" expanded="True" />
+                <Node name="Repositories" expanded="True" />
               </Node>
+              <Node name="Models" expanded="True" />
             </Node>
             <Node name="LaptopBE" expanded="True">
+              <Node name="Configs" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="UiModels" expanded="True" />
             </Node>
             <Node name="Services" expanded="True">
+              <Node name="ConvertionModels" expanded="True" />
               <Node name="IServices" expanded="True" />
               <Node name="Services" expanded="True" />
+              <Node name="VNPAY" expanded="True" />
             </Node>
           </Node>
         </State>

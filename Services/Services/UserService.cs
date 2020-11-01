@@ -36,7 +36,7 @@ namespace Services.Services
         {
             User user = registerModel.Adapt<User>();
             //Set role for customer
-            user.RoleId = 1;
+            user.RoleId = 2;
 
             userRepository.Add(user);
         }

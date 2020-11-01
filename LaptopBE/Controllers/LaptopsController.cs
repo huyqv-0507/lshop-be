@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using LaptopBE.UiModels;
+using Mapster;
 using Microsoft.AspNetCore.Mvc;
+using Services.ConvertionModels;
 using Services.IServices;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -17,13 +19,34 @@ namespace LaptopBE.Controllers
         {
             this.laptopService = laptopService;
         }
-        //GET api/v1/homes/laptops
+        //GET api/v1/laptops
         [HttpGet]
         public IActionResult GetLaptops()
         {
             var laptops = laptopService.GetLaptops();
             if (laptops == null) return Content("Laptop is empty");
-            return Ok(laptops);
+            List<LaptopUiModel> laptopModels = new List<LaptopUiModel>();
+            foreach (var laptop in laptops)
+            {
+                laptopModels.Add(laptop.Adapt<LaptopUiModel>());
+            }
+            //Shuffle list
+            return Ok(laptopModels.OrderBy(x => Guid.NewGuid()).ToList());
+        }
+        //POST api/v1/laptops
+        [HttpPost]
+        public IActionResult AddLaptop(LaptopModel laptopModel)
+        {
+            try
+            {
+                laptopService.AddLaptop(laptopModel);
+                laptopService.Save();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(laptopModel + e.Message);
+            }
+            return Ok(laptopModel);
         }
 
         //GET api/v1/homes/laptops/page=?&size=?

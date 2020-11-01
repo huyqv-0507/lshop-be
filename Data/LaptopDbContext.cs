@@ -70,6 +70,8 @@ namespace Data
                     .HasColumnType("varchar(50)");
                 entity.Property(prop => prop.Weight)
                     .HasColumnType("varchar(50)");
+                entity.Property(prop => prop.ImageUrl)
+                    .HasColumnType("nvarchar(500)");
                 entity.Property(prop => prop.BrandId)
                     .HasColumnType("int");
                 entity.HasMany<OrderDetail>()
@@ -112,18 +114,7 @@ namespace Data
                     .HasColumnType("decimal(10,2)");
             });
             #endregion
-            #region Picture
-            modelBuilder.Entity<Picture>(entity =>
-            {
-                entity.Property(prop => prop.PictureUrl)
-                    .HasColumnType("varchar(200)");
-                entity.HasOne<Laptop>()
-                    .WithMany(e => e.Pictures)
-                    .HasForeignKey(fk => fk.LaptopId)
-                    .HasConstraintName("FK_Picture_Laptop")
-                    .OnDelete(deleteBehavior: DeleteBehavior.ClientSetNull);
-            });
-            #endregion
+
             #region Role
             modelBuilder.Entity<Role>(entity =>
             {
@@ -155,7 +146,6 @@ namespace Data
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<Picture> Pictures { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
         #endregion

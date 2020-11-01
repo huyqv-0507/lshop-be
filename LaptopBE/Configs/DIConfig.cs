@@ -20,6 +20,7 @@ namespace LaptopBE.Configs
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<ILaptopService, LaptopService>();
+            services.AddTransient<IPaymentService, PaymentService>();
         }
     }
 }

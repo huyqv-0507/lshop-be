@@ -14,11 +14,12 @@ namespace Data.Models
         public string GraphicCard { get; set; }
         public string Storage { get; set; }
         public string Pin { get; set; }
+        public string Ram { get; set; }
         public decimal Weight { get; set; }
+        public string ImageUrl { get; set; }
         public int BrandId { get; set; }
 
         public ICollection<OrderDetail> OrderDetails { get; set; }
-        public ICollection<Picture> Pictures { get; set; }
         public Brand Brand { get; set; }
 
     }

@@ -4,6 +4,8 @@ using System.Linq;
 using Data.Infrastructures;
 using Data.Infrastructures.IRepositories;
 using Data.Models;
+using Mapster;
+using Services.ConvertionModels;
 using Services.IServices;
 
 namespace Services.Services
@@ -12,6 +14,7 @@ namespace Services.Services
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly ILaptopRepository laptopRepository;
+
         public LaptopService(IUnitOfWork unitOfWork, ILaptopRepository laptopRepository)
         {
             this.unitOfWork = unitOfWork;
@@ -39,6 +42,10 @@ namespace Services.Services
             unitOfWork.Commit();
         }
 
-
+        public void AddLaptop(LaptopModel laptopModel)
+        {
+            Laptop laptop = laptopModel.Adapt<Laptop>();
+            laptopRepository.Add(laptop);
+        }
     }
 }
