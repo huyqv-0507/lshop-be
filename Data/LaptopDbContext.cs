@@ -13,7 +13,7 @@ namespace Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=localhost;Database=LaptopDatabase;User=sa;Pwd=Laptopsql1234;Trusted_Connection=false");
+                optionsBuilder.UseSqlServer("Server=tcp:huyserver.database.windows.net,1433;Initial Catalog=db;Persist Security Info=True;User ID=huynl;Password=huyvuong0507##;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 

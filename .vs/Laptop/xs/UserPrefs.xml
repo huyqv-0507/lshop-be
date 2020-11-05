@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LaptopBE/Configs/DIConfig.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/LaptopDbContext.cs">
     <Files>
       <File FileName="Data/Models/Discount.cs" Line="15" Column="2" IsPinned="True" />
-      <File FileName="Data/LaptopDbContext.cs" Line="74" Column="53" />
+      <File FileName="Data/LaptopDbContext.cs" Line="7" Column="45" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
       <File FileName="Data/Models/Brand.cs" />
       <File FileName="Data/Models/Order.cs" />
       <File FileName="Data/Models/OrderDetail.cs" />
-      <File FileName="Data/Models/Laptop.cs" Line="19" Column="24" />
+      <File FileName="Data/Models/Laptop.cs" />
       <File FileName="Data/Infrastructures/IDbFactory.cs" />
       <File FileName="Data/Infrastructures/Disposable.cs" />
       <File FileName="Data/Infrastructures/IRepositoryBase.cs" />
@@ -30,7 +30,7 @@
       <File FileName="Data/Infrastructures/IRepositories/IUserRepository.cs" />
       <File FileName="LaptopBE/Properties/launchSettings.json" />
       <File FileName="LaptopBE/Startup.cs" />
-      <File FileName="LaptopBE/Configs/DIConfig.cs" Line="23" Column="70" />
+      <File FileName="LaptopBE/Configs/DIConfig.cs" />
       <File FileName="Services/IServices/IUserService.cs" />
       <File FileName="Services/Services/UserService.cs" />
       <File FileName="Services/ConvertionModels/RegisterModel.cs" />
@@ -40,7 +40,7 @@
       <File FileName="Services/IServices/IOrderService.cs" />
       <File FileName="Services/Services/OrderService.cs" />
       <File FileName="Services/VNPAY/VnPayLibrary.cs" />
-      <File FileName="LaptopBE/Controllers/LaptopsController.cs" Line="32" Column="42" />
+      <File FileName="LaptopBE/Controllers/LaptopsController.cs" />
       <File FileName="Services/IServices/IOrderDetailService.cs" />
       <File FileName="Services/Services/OrderDetailService.cs" />
       <File FileName="LaptopBE/Controllers/OrdersController.cs" />
@@ -61,6 +61,7 @@
                 <Node name="Repositories" expanded="True" />
               </Node>
               <Node name="Models" expanded="True" />
+              <Node name="LaptopDbContext.cs" selected="True" />
             </Node>
             <Node name="LaptopBE" expanded="True">
               <Node name="Configs" expanded="True" />
