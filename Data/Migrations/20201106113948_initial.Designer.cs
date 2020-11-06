@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(LaptopDbContext))]
-    [Migration("20200918142956_InitialDb")]
-    partial class InitialDb
+    [Migration("20201106113948_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.8")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -25,7 +25,6 @@ namespace Data.Migrations
                 {
                     b.Property<int>("BrandId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("BrandName")
@@ -41,7 +40,6 @@ namespace Data.Migrations
                 {
                     b.Property<int>("DiscountId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<decimal>("Amount")
@@ -62,20 +60,21 @@ namespace Data.Migrations
                 {
                     b.Property<int>("LaptopId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("BrandId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("BrandId1")
-                        .HasColumnType("int");
+                    b.Property<int?>("BrandId1");
 
                     b.Property<string>("DisplayScreen")
                         .HasColumnType("varchar(50)");
 
                     b.Property<string>("GraphicCard")
                         .HasColumnType("varchar(50)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(500)");
 
                     b.Property<string>("LaptopName")
                         .HasColumnType("varchar(50)");
@@ -89,6 +88,8 @@ namespace Data.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<string>("Ram");
+
                     b.Property<string>("SeriesCPU")
                         .HasColumnType("varchar(50)");
 
@@ -97,6 +98,7 @@ namespace Data.Migrations
 
                     b.Property<string>("Weight")
                         .IsRequired()
+                        .HasConversion(new ValueConverter<string, string>(v => default(string), v => default(string), new ConverterMappingHints(size: 64)))
                         .HasColumnType("varchar(50)");
 
                     b.HasKey("LaptopId");
@@ -112,7 +114,6 @@ namespace Data.Migrations
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreatedTime")
@@ -121,18 +122,17 @@ namespace Data.Migrations
                     b.Property<string>("PaymentMethod")
                         .HasColumnType("varchar(50)");
 
+                    b.Property<bool>("Status");
+
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(10,2)");
 
                     b.Property<string>("UserName")
                         .HasColumnType("varchar(20)");
 
-                    b.Property<string>("UserName1")
-                        .HasColumnType("varchar(20)");
-
                     b.HasKey("OrderId");
 
-                    b.HasIndex("UserName1");
+                    b.HasIndex("UserName");
 
                     b.ToTable("Orders");
                 });
@@ -141,26 +141,19 @@ namespace Data.Migrations
                 {
                     b.Property<int>("OrderDetailId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("DiscountId")
-                        .HasColumnType("int");
+                    b.Property<int>("DiscountId");
 
-                    b.Property<int?>("DiscountId1")
-                        .HasColumnType("int");
+                    b.Property<int?>("DiscountId1");
 
-                    b.Property<int>("LaptopId")
-                        .HasColumnType("int");
+                    b.Property<int>("LaptopId");
 
-                    b.Property<int?>("LaptopId1")
-                        .HasColumnType("int");
+                    b.Property<int?>("LaptopId1");
 
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
+                    b.Property<int>("OrderId");
 
-                    b.Property<int?>("OrderId1")
-                        .HasColumnType("int");
+                    b.Property<int?>("OrderId1");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(10,2)");
@@ -185,36 +178,10 @@ namespace Data.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("Data.Models.Picture", b =>
-                {
-                    b.Property<int>("PictureId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("LaptopId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("LaptopId1")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PictureUrl")
-                        .HasColumnType("varchar(200)");
-
-                    b.HasKey("PictureId");
-
-                    b.HasIndex("LaptopId");
-
-                    b.HasIndex("LaptopId1");
-
-                    b.ToTable("Pictures");
-                });
-
             modelBuilder.Entity("Data.Models.Role", b =>
                 {
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("RoleName")
@@ -228,6 +195,7 @@ namespace Data.Migrations
             modelBuilder.Entity("Data.Models.User", b =>
                 {
                     b.Property<string>("UserName")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Email")
@@ -236,14 +204,13 @@ namespace Data.Migrations
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Password");
 
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber");
 
-                    b.Property<int?>("RoleId1")
-                        .HasColumnType("int");
+                    b.Property<int>("RoleId");
+
+                    b.Property<int?>("RoleId1");
 
                     b.HasKey("UserName");
 
@@ -256,11 +223,10 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Data.Models.Laptop", b =>
                 {
-                    b.HasOne("Data.Models.Brand", null)
+                    b.HasOne("Data.Models.Brand")
                         .WithMany("Laptops")
                         .HasForeignKey("BrandId")
-                        .HasConstraintName("FK_Laptop_Brand")
-                        .IsRequired();
+                        .HasConstraintName("FK_Laptop_Brand");
 
                     b.HasOne("Data.Models.Brand", "Brand")
                         .WithMany()
@@ -271,7 +237,7 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Models.User", "User")
                         .WithMany("Orders")
-                        .HasForeignKey("UserName1");
+                        .HasForeignKey("UserName");
                 });
 
             modelBuilder.Entity("Data.Models.OrderDetail", b =>
@@ -279,45 +245,29 @@ namespace Data.Migrations
                     b.HasOne("Data.Models.Discount", "Discount")
                         .WithMany()
                         .HasForeignKey("DiscountId")
-                        .HasConstraintName("FK_Discount_OrderDetail")
-                        .IsRequired();
+                        .HasConstraintName("FK_Discount_OrderDetail");
 
-                    b.HasOne("Data.Models.Discount", null)
+                    b.HasOne("Data.Models.Discount")
                         .WithMany("OrderDetails")
                         .HasForeignKey("DiscountId1");
 
                     b.HasOne("Data.Models.Laptop", "Laptop")
                         .WithMany()
                         .HasForeignKey("LaptopId")
-                        .HasConstraintName("FK_Laptop_OrderDetail")
-                        .IsRequired();
+                        .HasConstraintName("FK_Laptop_OrderDetail");
 
-                    b.HasOne("Data.Models.Laptop", null)
+                    b.HasOne("Data.Models.Laptop")
                         .WithMany("OrderDetails")
                         .HasForeignKey("LaptopId1");
 
                     b.HasOne("Data.Models.Order", "Order")
                         .WithMany()
                         .HasForeignKey("OrderId")
-                        .HasConstraintName("FK_Order_OrderDetail")
-                        .IsRequired();
+                        .HasConstraintName("FK_Order_OrderDetail");
 
-                    b.HasOne("Data.Models.Order", null)
+                    b.HasOne("Data.Models.Order")
                         .WithMany("OrderDetails")
                         .HasForeignKey("OrderId1");
-                });
-
-            modelBuilder.Entity("Data.Models.Picture", b =>
-                {
-                    b.HasOne("Data.Models.Laptop", null)
-                        .WithMany("Pictures")
-                        .HasForeignKey("LaptopId")
-                        .HasConstraintName("FK_Picture_Laptop")
-                        .IsRequired();
-
-                    b.HasOne("Data.Models.Laptop", "Laptop")
-                        .WithMany()
-                        .HasForeignKey("LaptopId1");
                 });
 
             modelBuilder.Entity("Data.Models.User", b =>
@@ -325,10 +275,9 @@ namespace Data.Migrations
                     b.HasOne("Data.Models.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .HasConstraintName("FK_User_Role")
-                        .IsRequired();
+                        .HasConstraintName("FK_User_Role");
 
-                    b.HasOne("Data.Models.Role", null)
+                    b.HasOne("Data.Models.Role")
                         .WithMany("Users")
                         .HasForeignKey("RoleId1");
                 });

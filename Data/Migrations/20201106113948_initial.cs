@@ -1,9 +1,10 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class InitialDb : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +13,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     BrandId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BrandName = table.Column<string>(type: "varchar(20)", nullable: false)
                 },
                 constraints: table =>
@@ -25,7 +26,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     DiscountId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Code = table.Column<string>(type: "varchar(20)", nullable: true),
                     ExpiredTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     Amount = table.Column<decimal>(type: "decimal(10,2)", nullable: false)
@@ -40,7 +41,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     RoleId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     RoleName = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
                 constraints: table =>
@@ -53,7 +54,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     LaptopId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     LaptopName = table.Column<string>(type: "varchar(50)", nullable: true),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
@@ -62,7 +63,9 @@ namespace Data.Migrations
                     GraphicCard = table.Column<string>(type: "varchar(50)", nullable: true),
                     Storage = table.Column<string>(type: "varchar(50)", nullable: true),
                     Pin = table.Column<string>(type: "varchar(50)", nullable: true),
+                    Ram = table.Column<string>(nullable: true),
                     Weight = table.Column<string>(type: "varchar(50)", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(500)", nullable: true),
                     BrandId = table.Column<int>(type: "int", nullable: false),
                     BrandId1 = table.Column<int>(nullable: true)
                 },
@@ -91,6 +94,7 @@ namespace Data.Migrations
                     Password = table.Column<string>(nullable: true),
                     FullName = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     Email = table.Column<string>(type: "varchar(100)", nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true),
                     RoleId = table.Column<int>(nullable: false),
                     RoleId1 = table.Column<int>(nullable: true)
                 },
@@ -112,50 +116,23 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Pictures",
-                columns: table => new
-                {
-                    PictureId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PictureUrl = table.Column<string>(type: "varchar(200)", nullable: true),
-                    LaptopId = table.Column<int>(nullable: false),
-                    LaptopId1 = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Pictures", x => x.PictureId);
-                    table.ForeignKey(
-                        name: "FK_Picture_Laptop",
-                        column: x => x.LaptopId,
-                        principalTable: "Laptops",
-                        principalColumn: "LaptopId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Pictures_Laptops_LaptopId1",
-                        column: x => x.LaptopId1,
-                        principalTable: "Laptops",
-                        principalColumn: "LaptopId",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Orders",
                 columns: table => new
                 {
                     OrderId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     UserName = table.Column<string>(type: "varchar(20)", nullable: true),
                     CreatedTime = table.Column<DateTime>(type: "datetime", nullable: false),
                     TotalPrice = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    PaymentMethod = table.Column<string>(type: "varchar(50)", nullable: true),
-                    UserName1 = table.Column<string>(nullable: true)
+                    Status = table.Column<bool>(nullable: false),
+                    PaymentMethod = table.Column<string>(type: "varchar(50)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.OrderId);
                     table.ForeignKey(
-                        name: "FK_Orders_Users_UserName1",
-                        column: x => x.UserName1,
+                        name: "FK_Orders_Users_UserName",
+                        column: x => x.UserName,
                         principalTable: "Users",
                         principalColumn: "UserName",
                         onDelete: ReferentialAction.Restrict);
@@ -166,7 +143,7 @@ namespace Data.Migrations
                 columns: table => new
                 {
                     OrderDetailId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     LaptopId = table.Column<int>(nullable: false),
                     OrderId = table.Column<int>(nullable: false),
                     DiscountId = table.Column<int>(nullable: false),
@@ -258,19 +235,9 @@ namespace Data.Migrations
                 column: "OrderId1");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Orders_UserName1",
+                name: "IX_Orders_UserName",
                 table: "Orders",
-                column: "UserName1");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Pictures_LaptopId",
-                table: "Pictures",
-                column: "LaptopId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Pictures_LaptopId1",
-                table: "Pictures",
-                column: "LaptopId1");
+                column: "UserName");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Users_RoleId",
@@ -289,22 +256,19 @@ namespace Data.Migrations
                 name: "OrderDetails");
 
             migrationBuilder.DropTable(
-                name: "Pictures");
-
-            migrationBuilder.DropTable(
                 name: "Discounts");
-
-            migrationBuilder.DropTable(
-                name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "Laptops");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Orders");
 
             migrationBuilder.DropTable(
                 name: "Brands");
+
+            migrationBuilder.DropTable(
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Roles");
