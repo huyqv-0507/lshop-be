@@ -4,7 +4,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:52943",
+      "applicationUrl": "https://huynlprc.azurewebsites.net",
       "sslPort": 44375
     }
   },
@@ -21,7 +21,7 @@
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",
-      "applicationUrl": "https://127.0.0.1:5001;https://127.0.0.1:5000",
+      "applicationUrl": "https://huynlprc.azurewebsites.net",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
