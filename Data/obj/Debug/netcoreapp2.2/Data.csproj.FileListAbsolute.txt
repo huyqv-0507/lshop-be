@@ -3,10 +3,10 @@
 /Users/lehuy/Projects/Laptop/Data/bin/Debug/netcoreapp2.2/Data.runtimeconfig.dev.json
 /Users/lehuy/Projects/Laptop/Data/bin/Debug/netcoreapp2.2/Data.dll
 /Users/lehuy/Projects/Laptop/Data/bin/Debug/netcoreapp2.2/Data.pdb
+/Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.csprojAssemblyReference.cache
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.AssemblyInfoInputs.cache
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.AssemblyInfo.cs
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.csproj.CoreCompileInputs.cache
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.dll
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.pdb
 /Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.genruntimeconfig.cache
-/Users/lehuy/Projects/Laptop/Data/obj/Debug/netcoreapp2.2/Data.csprojAssemblyReference.cache

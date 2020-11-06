@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/LaptopDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaptopBE/Properties/launchSettings.json">
     <Files>
       <File FileName="Data/Models/Discount.cs" Line="15" Column="2" IsPinned="True" />
-      <File FileName="Data/LaptopDbContext.cs" Line="7" Column="45" />
+      <File FileName="Data/LaptopDbContext.cs" Line="12" Column="38" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
       <File FileName="Data/Models/Brand.cs" />
@@ -28,7 +28,7 @@
       <File FileName="Data/Infrastructures/IRepositories/IOrderRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IRoleRepository.cs" />
       <File FileName="Data/Infrastructures/IRepositories/IUserRepository.cs" />
-      <File FileName="LaptopBE/Properties/launchSettings.json" />
+      <File FileName="LaptopBE/Properties/launchSettings.json" Line="20" Column="7" />
       <File FileName="LaptopBE/Startup.cs" />
       <File FileName="LaptopBE/Configs/DIConfig.cs" />
       <File FileName="Services/IServices/IUserService.cs" />
@@ -50,6 +50,7 @@
       <File FileName="LaptopBE/Controllers/PaymentController.cs" />
       <File FileName="Services/IServices/IPaymentService.cs" />
       <File FileName="LaptopBE/UiModels/LaptopUiModel.cs" />
+      <File FileName="LaptopBE/Properties/PublishProfiles/LaptopBE - Web Deploy.pubxml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -61,18 +62,15 @@
                 <Node name="Repositories" expanded="True" />
               </Node>
               <Node name="Models" expanded="True" />
-              <Node name="LaptopDbContext.cs" selected="True" />
             </Node>
             <Node name="LaptopBE" expanded="True">
               <Node name="Configs" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" expanded="True" />
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
               <Node name="UiModels" expanded="True" />
-            </Node>
-            <Node name="Services" expanded="True">
-              <Node name="ConvertionModels" expanded="True" />
-              <Node name="IServices" expanded="True" />
-              <Node name="Services" expanded="True" />
-              <Node name="VNPAY" expanded="True" />
             </Node>
           </Node>
         </State>
