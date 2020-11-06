@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Data/LaptopDbContext.cs">
     <Files>
       <File FileName="Data/Models/Discount.cs" Line="15" Column="2" IsPinned="True" />
-      <File FileName="Data/LaptopDbContext.cs" Line="16" Column="82" />
+      <File FileName="Data/LaptopDbContext.cs" Line="16" Column="112" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
       <File FileName="Data/Models/Brand.cs" />

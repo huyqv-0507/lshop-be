@@ -13,7 +13,7 @@ namespace Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=tcp:huyserver.database.windows.net,1433;Initial Catalog=huyserver;Persist Security Info=True;User ID=huyserver;Password=huyvuong0507##;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Server=tcp:huyserver.database.windows.net,1433;Initial Catalog=huydb;Persist Security Info=True;User ID=huyserver;Password=huyvuong0507##;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
