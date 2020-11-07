@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{A0B8AFDC-5178-4E36-9409-A54EAE7EA4D9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/LaptopDbContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/Services/PaymentService.cs">
     <Files>
       <File FileName="Data/Models/Discount.cs" Line="15" Column="2" IsPinned="True" />
-      <File FileName="Data/LaptopDbContext.cs" Line="18" Column="10" />
+      <File FileName="Data/LaptopDbContext.cs" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Data/Models/User.cs" />
       <File FileName="Data/Models/Brand.cs" />
@@ -40,16 +40,17 @@
       <File FileName="Services/IServices/IOrderService.cs" />
       <File FileName="Services/Services/OrderService.cs" />
       <File FileName="Services/VNPAY/VnPayLibrary.cs" />
-      <File FileName="LaptopBE/Controllers/LaptopsController.cs" />
+      <File FileName="LaptopBE/Controllers/LaptopsController.cs" Line="42" Column="35" />
       <File FileName="Services/IServices/IOrderDetailService.cs" />
       <File FileName="Services/Services/OrderDetailService.cs" />
       <File FileName="LaptopBE/Controllers/OrdersController.cs" />
       <File FileName="Services/ConvertionModels/LaptopModel.cs" />
-      <File FileName="Services/Services/PaymentService.cs" />
+      <File FileName="Services/Services/PaymentService.cs" Line="1" Column="1" />
       <File FileName="Services/VNPAY/OrderInfor.cs" />
       <File FileName="LaptopBE/Controllers/PaymentController.cs" />
-      <File FileName="Services/IServices/IPaymentService.cs" />
+      <File FileName="Services/IServices/IPaymentService.cs" Line="1" Column="1" />
       <File FileName="LaptopBE/UiModels/LaptopUiModel.cs" />
+      <File FileName="LaptopBE/Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -57,17 +58,21 @@
           <Node name="Laptop" expanded="True">
             <Node name="Data" expanded="True">
               <Node name="Infrastructures" expanded="True">
-                <Node name="IRepositories" expanded="True" />
                 <Node name="Repositories" expanded="True" />
               </Node>
               <Node name="Models" expanded="True" />
-              <Node name="LaptopDbContext.cs" selected="True" />
             </Node>
             <Node name="LaptopBE" expanded="True">
               <Node name="Configs" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="UiModels" expanded="True" />
+            </Node>
+            <Node name="Services" expanded="True">
+              <Node name="ConvertionModels" expanded="True" />
+              <Node name="IServices" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="PaymentService.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>

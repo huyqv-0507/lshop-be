@@ -16,8 +16,8 @@ namespace Services.Services
             //Get Config Info
             string vnp_Returnurl = "https://vnpay.vn/"; //URL nhan ket qua tra ve 
             string vnp_Url = "http://sandbox.vnpayment.vn/paymentv2/vpcpay.html"; //URL thanh toan cua VNPAY 
-            string vnp_TmnCode = "V506LPIZ"; //Ma website
-            string vnp_HashSecret = "OJQGFBNAMFXOYDATMDUBAATKTJMBODMG"; //Chuoi bi mat
+            string vnp_TmnCode = "52HMR9SZ"; //Ma website
+            string vnp_HashSecret = "NAQYDDNIAKILYBXEAJBGBFCOPZTXLUYC"; //Chuoi bi mat
 
             //Build URL for VNPAY
             VnPayLibrary vnpay = new VnPayLibrary();
