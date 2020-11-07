@@ -44,7 +44,19 @@ namespace Services.Services
 
         public void AddLaptop(LaptopModel laptopModel)
         {
-            Laptop laptop = laptopModel.Adapt<Laptop>();
+            Laptop laptop = new Laptop
+            {
+                BrandId = laptopModel.BrandId,
+                ImageUrl = laptopModel.ImageUrl,
+                GraphicCard = laptopModel.GraphicCard,
+                LaptopName = laptopModel.LaptopName,
+                Price = laptopModel.Price,
+                Quantity = laptopModel.Quantity,
+                Ram = laptopModel.Ram,
+                SeriesCPU = laptopModel.SeriesCPU,
+                Storage = laptopModel.Storage,
+                Weight = laptopModel.Weight,
+            };
             laptopRepository.Add(laptop);
         }
     }
